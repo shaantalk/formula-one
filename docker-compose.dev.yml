@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: formula-one-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/src
+    environment:
+      - NODE_ENV=development
+      - TSC_COMPILE_ON_ERROR=true
+      - ESLINT_NO_DEV_ERRORS=true 
+    ports:
+      - "3000:3000"

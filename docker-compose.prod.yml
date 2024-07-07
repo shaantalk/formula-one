@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: formula-one-prod
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    environment:
+      - NODE_ENV=production
+      - TSC_COMPILE_ON_ERROR=true
+      - ESLINT_NO_DEV_ERRORS=true 
+    ports:
+      - "80:80"
