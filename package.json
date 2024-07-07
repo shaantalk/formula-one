@@ -1,6 +1,5 @@
 {
   "name": "formula-one",
-  "homepage": "formula-one",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
